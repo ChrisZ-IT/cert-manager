@@ -45,4 +45,6 @@ k get secret -n istio-ingress opnsense-cert-request -o jsonpath='{.data.tls\.key
 
 # Then import into opnsense via its gui or api
 ```
+
+
 I will be creating some automation for cert rotation on those platforms. Since Im using awx it will probably just be a scheduled ansible job.
