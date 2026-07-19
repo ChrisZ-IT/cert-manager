@@ -17,9 +17,10 @@ helm install cert-manager \
     --set crds.enabled=true
 ```
 2. Wait for pods in `cert-manager` namespace to enter `running` state
-3. Deploy issuers.
+3. Deploy cloudflare secret and cert issuers.
 ```
-export DOMAIN_NAME=domain.local
+export DOMAIN_NAME=domain.local # update with your own domain
+export EMAIL_ADDRESS=admin@domain.local # update with your own email address
 export CLOUDFLARE_TOKEN=<Enter Your API Token>
 
 # Create secret with cloudflare api token
