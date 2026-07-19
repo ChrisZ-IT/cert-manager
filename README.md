@@ -4,7 +4,8 @@ My homelab deployment of cert manager
 I just followed the [AWS + LoadBalancer + Let's encrypt](https://cert-manager.io/docs/tutorials/getting-started-aws-letsencrypt/) tutorial and just adjusted for self hosted k8s
 
 I installed the base service via the helm install. So installing cert-manager to your cluster is a pre-req.
-Im also using cloudflare for my domain registration/public DNS. Adjust deployment if you use something else
+Im also using cloudflare for my domain registration/public DNS. Adjust deployment if you use something else.
+I also use [envsubst](https://github.com/a8m/envsubst) for expanding env vars into my k8s config files. This helps keep what i push up to github a little more generic.
 
 1. Install cert-manager (updating the version to your required version)
 ```
