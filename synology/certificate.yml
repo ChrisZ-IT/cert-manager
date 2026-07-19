@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: synology-cert-request
+  namespace: istio-ingress
+spec:
+  secretName: synology-cert-request
+  duration: 2160h
+  renewBefore: 48h
+  privateKey:
+    rotationPolicy: Always
+  commonName: dennas01.${DOMAIN_NAME}
+  dnsNames:
+    - dennas01.${DOMAIN_NAME}
+  usages:
+    - digital signature
+    - key encipherment
+    - server auth
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
