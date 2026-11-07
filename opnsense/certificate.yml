@@ -13,6 +13,7 @@ spec:
   commonName: opnsense01.${DOMAIN_NAME}
   dnsNames:
     - opnsense01.${DOMAIN_NAME}
+    - opnsense02.${DOMAIN_NAME}
   usages:
     - digital signature
     - key encipherment
